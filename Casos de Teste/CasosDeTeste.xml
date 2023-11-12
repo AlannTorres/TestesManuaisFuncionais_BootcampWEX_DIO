@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2023-11-12 03:55:24 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="111948323" key="SWAG-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:49:13 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Como usuário, desejo adicionar mais de uma unidade do mesmo item no carrinho na loja virtual para facilitar a compra de múltiplas quantidades.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Adicionar Mais de Uma Unidade do Mesmo Item no Carrinho]]></name>
+            <objective><![CDATA[arantir que o usu&aacute;rio possa adicionar mais de uma unidade do mesmo item ao carrinho. ]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O usu&aacute;rio est&aacute; logado na loja virtual. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o usuário está logado na loja virtual
+
+When o usuário seleciona um item e adiciona mais de uma unidade ao carrinho
+
+Then a quantidade de unidades do item no carrinho deve ser igual à quantidade desejada
+
+And o total do carrinho deve ser recalculado corretamente]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="111948325" key="SWAG-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:50:18 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Como usuário, desejo adicionar mais de uma unidade do mesmo item no carrinho na loja virtual para facilitar a compra de múltiplas quantidades.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Atualização da Quantidade no Carrinho]]></name>
+            <objective><![CDATA[Verificar se o total do carrinho &eacute; recalculado corretamente ap&oacute;s o ajuste da quantidade de um item. ]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O usu&aacute;rio possui itens no carrinho. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o usuário possui itens no carrinho
+
+When o usuário acessa o carrinho e ajusta a quantidade de um item específico
+
+And confirma as alterações
+
+Then o total do carrinho deve ser recalculado corretamente]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="111948358" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:51:29 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Como usuário, desejo adicionar mais de uma unidade do mesmo item no carrinho na loja virtual para facilitar a compra de múltiplas quantidades.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Limite de Estoque]]></name>
+            <objective><![CDATA[Verificar se o sistema lida corretamente com tentativas de adicionar ao carrinho quando a quantidade desejada n&atilde;o est&aacute; dispon&iacute;vel.]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O item selecionado tem uma quantidade dispon&iacute;vel em estoque menor que a desejada pelo usu&aacute;rio. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o item selecionado tem uma quantidade disponível em estoque menor que a desejada pelo usuário
+
+When o usuário tenta adicionar uma quantidade maior do que a disponível em estoque ao carrinho
+
+Then uma mensagem de erro deve ser exibida informando que a quantidade desejada não está disponível
+
+And o carrinho não deve ser atualizado com quantidades além do estoque disponível]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="111948386" key="SWAG-T5">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:54:47 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[ Como usuário, desejo receber confirmação por e-mail após o cadastro na loja virtual para garantir a segurança da minha conta.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Verificar e-mail de confirmação após o cadastro]]></name>
+            <objective><![CDATA[Garantir que o cliente receba um e-mail de confirma&ccedil;&atilde;o ap&oacute;s o cadastro bem-sucedido. ]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O usu&aacute;rio rec&eacute;m-cadastrado inseriu informa&ccedil;&otilde;es v&aacute;lidas durante o processo de registro. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Um usu&aacute;rio completa o processo de cadastro na loja virtual. ]]></description>
+                        <expectedResult><![CDATA[O cadastro &eacute; bem-sucedido. ]]></expectedResult>
+                        <testData><![CDATA[Informa&ccedil;&otilde;es v&aacute;lidas do usu&aacute;rio. ]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[O sistema envia um e-mail de confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[Um e-mail de confirma&ccedil;&atilde;o &eacute; enviado para o usu&aacute;rio. ]]></expectedResult>
+                        <testData><![CDATA[-]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[O cliente verifica imediatamente e recebe com sucesso o e-mail de confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[O e-mail de confirma&ccedil;&atilde;o &eacute; recebido com sucesso. ]]></expectedResult>
+                        <testData><![CDATA[Caixa de entrada de e-mail. ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[O e-mail de confirma&ccedil;&atilde;o cont&eacute;m as informa&ccedil;&otilde;es relevantes. ]]></description>
+                        <expectedResult><![CDATA[O e-mail cont&eacute;m informa&ccedil;&otilde;es sobre a confirma&ccedil;&atilde;o. ]]></expectedResult>
+                        <testData><![CDATA[Conte&uacute;do do e-mail de confirma&ccedil;&atilde;o. ]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="111948389" key="SWAG-T6">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:56:03 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[ Como usuário, desejo receber confirmação por e-mail após o cadastro na loja virtual para garantir a segurança da minha conta.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Confirmação bem-sucedida na tela de confirmação]]></name>
+            <objective><![CDATA[Garantir que a confirma&ccedil;&atilde;o &eacute; bem-sucedida ao seguir os passos indicados na tela. ]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O cliente acessou a tela de confirma&ccedil;&atilde;o. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Um cliente abre o e-mail de confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[O e-mail de confirma&ccedil;&atilde;o est&aacute; dispon&iacute;vel. ]]></expectedResult>
+                        <testData><![CDATA[Caixa de entrada de e-mail. ]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[&nbsp;O e-mail de confirma&ccedil;&atilde;o foi recebido com sucesso. ]]></description>
+                        <expectedResult><![CDATA[O e-mail de confirma&ccedil;&atilde;o est&aacute; dispon&iacute;vel para leitura. ]]></expectedResult>
+                        <testData><![CDATA[-]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[O cliente clica no link fornecido no e-mail. ]]></description>
+                        <expectedResult><![CDATA[Cliente &eacute; redirecionado para a tela de confirma&ccedil;&atilde;o.]]></expectedResult>
+                        <testData><![CDATA[Link no e-mail de confirma&ccedil;&atilde;o. ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[O cliente &eacute; redirecionado para a tela de confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[O cliente est&aacute; na tela de confirma&ccedil;&atilde;o. ]]></expectedResult>
+                        <testData><![CDATA[Tela de confirma&ccedil;&atilde;o. ]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="111948393" key="SWAG-T7">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Alan Torres</createdBy>
+            <createdOn>2023-11-11 20:57:49 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-1</key>
+                    <summary><![CDATA[ Como usuário, desejo receber confirmação por e-mail após o cadastro na loja virtual para garantir a segurança da minha conta.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Conteúdo do e-mail de confirmação]]></name>
+            <objective><![CDATA[Verificar se o e-mail de confirma&ccedil;&atilde;o cont&eacute;m informa&ccedil;&otilde;es relevantes sobre a confirma&ccedil;&atilde;o. ]]></objective>
+            <owner>712020:e10dce5a-18e9-470d-ac5c-0d2a8b011a6c</owner>
+            <precondition><![CDATA[O usu&aacute;rio rec&eacute;m-cadastrado inseriu informa&ccedil;&otilde;es v&aacute;lidas durante o processo de registro. ]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Um usu&aacute;rio completa o processo de cadastro na loja virtual. ]]></description>
+                        <expectedResult><![CDATA[O cadastro &eacute; bem-sucedido. ]]></expectedResult>
+                        <testData><![CDATA[Informa&ccedil;&otilde;es v&aacute;lidas do usu&aacute;rio. ]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[O sistema envia o e-mail de confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[Um e-mail de confirma&ccedil;&atilde;o &eacute; enviado para o usu&aacute;rio. ]]></expectedResult>
+                        <testData><![CDATA[-]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[O e-mail de confirma&ccedil;&atilde;o &eacute; verificado. ]]></description>
+                        <expectedResult><![CDATA[O e-mail de confirma&ccedil;&atilde;o &eacute; recebido com sucesso. ]]></expectedResult>
+                        <testData><![CDATA[Caixa de entrada de e-mail. ]]></testData>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[O e-mail de confirma&ccedil;&atilde;o cont&eacute;m informa&ccedil;&otilde;es relevantes sobre a confirma&ccedil;&atilde;o. ]]></description>
+                        <expectedResult><![CDATA[<div><div>O e-mail cont&eacute;m informa&ccedil;&otilde;es sobre a confirma&ccedil;&atilde;o.</div></div>]]></expectedResult>
+                        <testData><![CDATA[&nbsp;Conte&uacute;do do e-mail de confirma&ccedil;&atilde;o. ]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
